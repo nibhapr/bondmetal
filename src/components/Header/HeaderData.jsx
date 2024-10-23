@@ -1,11 +1,15 @@
 const HeaderData = [
     {
         title: 'Home',
-        link:'/home-buisiness'
+        link:'/'
     },
     {
         title: 'About',
        link:'/About'
+    },
+    {
+        title: 'Contact',
+       link:'/ContactPage'
     },
    
            

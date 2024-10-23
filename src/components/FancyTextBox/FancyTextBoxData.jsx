@@ -49,7 +49,7 @@ const fancyTextBox02 = [
             class: "line-icon-Mail-Read text-basecolor"
         },
         title: "How can we help you?",
-        description: "Lorem ipsum is simply dummy text of the printing industry",
+        description: "Send a Mail to Us ",
         linkTitle: "Send us an email",
         link: "mailto:info@yourdomain.com"
     },
@@ -58,18 +58,18 @@ const fancyTextBox02 = [
             class: "line-icon-Phone-2 text-basecolor"
         },
         title: "Feel free to get in touch?",
-        description: "Lorem ipsum is simply dummy text of the printing industry",
-        linkTitle: "Give us a call today",
-        link: "#"
+        description: "Make call with Us",
+        linkTitle: "+971 050 4132 803",
+        link: "tell:+9710504132803"
     },
     {
         icon: {
             class: "line-icon-Approved-Window text-basecolor"
         },
-        title: "Ready to request a quote?",
-        description: "Lorem ipsum is simply dummy text of the printing industry",
-        linkTitle: "Describe your project",
-        link: "#"
+        title: "Connect with Map",
+        description: "Showroom No 6, M 17, Musaffah- Abu Dhabi ",
+        linkTitle: "",
+        link: "Showroom No 6, M 17, Musaffah- Abu Dhabi"
     }
 ]
 

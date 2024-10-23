@@ -1,0 +1,79 @@
+---
+import { Col, Container, Navbar, Row } from 'react-bootstrap';
+import Layout from '../layouts/Layout.astro';
+
+
+const metaDescription = "Have something to say? We are here to help. Fill up the form or send email or call phone.";
+
+const pageTitle = "Signage Making Company in Sharjah, UAE";
+
+---
+<head>
+  <title>{pageTitle}</title>
+  <meta name="description" content={metaDescription} />
+</head>
+
+<Layout title="Contact">
+  <Container>
+    <div class="w-full h-80 md:min-h-screen flex flex-col justify-center gap-3 mx-auto mt-10 pt-10 pb-10 bg-no-repeat bg-cover bg-center" style="background-image: url('/assets/contact benner.webp');">
+      <h1 class="font-bold text-5xl md:text-5xl text-white text-left px-10 md:px-20 z-20">
+          Contact Us
+      </h1>
+    </div>
+
+    <div class="mt-1 md:mt-6 px-5 md:mx-6 py-6">
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">Touch With Us</h2>
+    </div>
+    
+    <div class="grid mx-5 md:px-16 md:grid-cols-2 gap-10 max-w-8xl mb-7 mt-7">
+      <div>
+        <p class="text-lg leading-relaxed text-slate-500 mt-3">
+          Have something to say? We are here to help. Fill up the form or send email or call phone.
+        </p>
+        <div class="mt-5">
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            
+            <span>Cheema Advertising S121  Industrial Area , Industrial Area 10 , Sharjah , United Arab Emirates</span>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+           
+            <a href="mailto:sales@cheemaadv.com">sales@cheemaadv.com</a>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            
+            <a href="tel:+971508692014">+971 50 869 2014</a>
+          </div>
+          <div class="flex items-center mt-2 space-x-4 text-gray-600">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" color="currentColor"><path d="m4.74 14.369l1.954-1.387a5.3 5.3 0 0 1 1.746-.823c.732-.195 1.06-.595 1.06-1.448c0-2.165 5-2.395 5 0c0 .853.328 1.253 1.06 1.447c.642.172 1.2.435 1.746.824l1.954 1.386c.883.628 1.295.931 1.524 1.414c.216.454.216.986.216 2.05c0 1.914 0 2.871-.536 3.484c-.649.743-2.336.68-3.372.68H6.908c-1.036 0-2.689.103-3.372-.68C3 20.703 3 19.746 3 17.832c0-1.064 0-1.596.216-2.05c.23-.482.64-.786 1.524-1.414"/><path d="M14 17a2 2 0 1 1-4 0a2 2 0 0 1 4 0M6.96 3.698c-1.318.376-2.266.843-3.134 1.407c-1.373.892-1.962 2.499-1.8 4.05c.068.656.595.97 1.205.8c.464-.13.928-.255 1.389-.391c1.347-.4 1.664-.886 1.851-2.265zm0 0c3.259-.93 6.821-.93 10.08 0m0 0c1.318.376 2.266.843 3.134 1.407c1.373.892 1.962 2.499 1.8 4.05c-.068.656-.595.97-1.205.8c-.463-.13-.928-.255-1.389-.391c-1.347-.4-1.664-.886-1.851-2.265z"/></g></svg>
+            <a href="tel:065342331">06 534 2331</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <form id='contact-form' action="send-email.php" method="POST">
+          <div class="mb-4">
+            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter Your Name " required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+          </div>
+          <div class="mb-4">
+            <label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
+            <input type="tel" name="phone" id="phone" placeholder="Enter Your Number " pattern="[0-9, +]*" oninput="this.value = this.value.replace(/[^0-9, +]/g, '')" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter Your Email " required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+            <textarea name="message" id="message" placeholder="Enter Your Message " required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-5 px-3 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
+          </div>
+          <button type="submit" class="inline-flex items-center px-4 py-2 border border-gray-300 text-base font-normal rounded-md shadow-sm text-black hover:bg-blue-950 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 gap-2">
+            Submit
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><g fill="none"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M20.25 3.532a1 1 0 0 1 1.183 1.329l-6 15.5a1 1 0 0 1-1.624.362l-3.382-3.235l-1.203 1.202c-.636.636-1.724.186-1.724-.714v-3.288L2.309 9.723a1 1 0 0 1 .442-1.691l17.5-4.5Zm-2.114 4.305l-7.998 6.607l3.97 3.798zm-1.578-1.29L4.991 9.52l3.692 3.53l7.875-6.505Z"/></g></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+    
+  </Container>
+</Layout>

@@ -1,0 +1,124 @@
+---
+import Buttons from '../components/Button/Buttons'
+import { Col, Container, Navbar, Row } from 'react-bootstrap';
+import IconWithText from '../components/IconWithText/IconWithText'
+
+const IconWithTextData = [
+{
+        icon: "line-icon-Building text-basecolor text-[40px] text-fastblue",
+        title: "LED Signs",
+        content: "Drive traffic to your business with high-impact LED advertising solutions! Our signs are designed for maximum visibility, ensuring your message reaches potential customers even from a distance.",
+    },
+    {
+        icon: "line-icon-Monitor text-basecolor text-[40px] text-fastblue",
+        title: "Outdoor signs",
+        content: "Guide your visitors with our customizable directional signs. Perfect for parks, events, and businesses, these signs help direct foot traffic while enhancing your brand visibility.",
+    },
+    {
+        icon: "line-icon-Printer text- text-[40px] text-fastblue",
+        title: "Indoor Signs",
+        content: "Help visitors navigate your space with our informative directional signs. Clear and concise, these signs ensure everyone finds their way with ease.",
+    },
+    {
+        icon: "line-icon-Talk-Man text-basecolor text-[40px] text-fastblue",
+        title: "Wayfinding Signs",
+        content: "Ensure smooth navigation with our clear directional signs. Designed for visibility, these signs guide visitors effortlessly through any space.",
+    },
+    {
+        icon: "line-icon-Heart text-basecolor text-[40px] text-fastblue",
+        title: "Neon Signs",
+        content: "Make a statement with our custom neon signs! Personalize your message or design to create a unique focal point that captures attention..",
+    },
+    {
+        icon: "line-icon-Gear-2 text-basecolor text-[40px] text-fastblue",
+        title: "Hotel Signs",
+        content: "Welcome guests with our elegant lobby signs, designed to create a sophisticated first impression and provide essential information.",
+    },
+];
+
+
+---
+
+
+<style>
+  .autoRotate{
+    animation: autoRotateAnimation;
+    animation-timeline: view();
+  }
+  @keyframes autoRotateAnimation{
+      from{
+          transform: rotate(0deg);
+      }
+      to{
+          transform: rotate(360deg);
+      }
+  }  
+
+  .autoShow{
+    animation: autoShowAnimation both;
+    animation-timeline: view(70% 5%);
+  }
+
+  @keyframes autoShowAnimation{
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+  }
+
+  .fadeInRight {
+    animation: fadeInRightAnimation;
+    animation-timeline: view();
+  }
+
+  @keyframes fadeInRightAnimation {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+  }
+
+  .fadeInLeft {
+    animation: fadeInLeftAnimation;
+    animation-timeline: view();
+  }
+
+  @keyframes fadeInLeftAnimation {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+</style>
+
+<section class="py-[160px] overflow-hidden lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
+ 
+    <Container>
+      <Row className="justify-center">
+        <div class="col-xl-3 col-lg-4 col-sm-7 flex flex-col md:mb-24">
+          <div class="mb-[20px] md:text-center sm:mb-[10px]">
+            <span class="font-serif text-md uppercase font-medium text-gradient bg-gradient-to-r from-[#556fff] via-[#e05fc4] to-[#ff798e]">About company</span>
+          </div>
+          <h3 class="alt-font text-darkgray font-semibold mb-[20px] font-serif md:text-center md:mb-[30px] heading-5">We combine design, thinking and technical</h3>
+          <div class="mt-auto mx-auto mx-lg-0">
+            <Buttons href="/" className="font-medium font-serif uppercase bg-[#fff] hover:bg-black rounded-none md:mb-[15px] text-xxs btn-fancy xs:mb-0" color="#000" size="sm" themeColor="#000" title="Discover litho" />
+          </div>
+        </div>
+        <Col xl={{ span: 7, offset: 2 }} lg={8}>
+            <IconWithText grid="row-cols-1 row-cols-lg-2 row-cols-sm-2 gap-y-[40px]" theme="icon-with-text-01" data={IconWithTextData} />
+        </Col>
+      </Row>
+    </Container>
+    </section>

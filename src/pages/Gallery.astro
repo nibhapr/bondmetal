@@ -1,0 +1,183 @@
+---
+import { Col, Container, Navbar, Row } from 'react-bootstrap';
+import AboutUsComponents from '../components/AboutUsComponents';
+import "../assets/css/icons.css";
+import "../assets/css/global.css";
+import "../assets/css/pages.css";
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome to Astro.">
+    <div class="parallax-container">
+        <div class="background-image"></div>
+  </div>
+  
+  <section class="image-gallery custom-section">
+      <h4 class="signage-heading">Our Image Gallery</h4>
+      <Container>
+          <div>
+            <img src="./assets/img/bond.jpg" alt="">
+            <img src="./assets/img/bond1.jpg" alt="">
+            <img src="./assets/img/bond2.jpg" alt="">
+            <img src="./assets/img/bond3.jpg" alt="">
+            <img src="./assets/img/bond4.jpg" alt="">
+        </div>
+        
+        
+    </Container>
+</section>
+
+</Layout>
+
+<!-- Add FontAwesome link for the icon -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+<style>
+    
+    .parallax-container {
+        position: relative;
+        overflow: hidden;
+        height: 465px; /* Default for medium devices */
+}
+
+@media (max-width: 1024px) {
+  .parallax-container {
+    height: 350px; /* Small devices */
+  }
+}
+
+@media (max-width: 768px) {
+  .parallax-container {
+    height: 357px; /* Extra small devices */
+  }
+}
+
+.background-image {
+  background-image: url('./assets/img/sign.webp');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 120vh; /* Default for large devices */
+  top: 60px;
+}
+
+@media (max-width: 1024px) {
+  .background-image {
+    height: 64vh;
+    top: -46px;
+  }
+}
+
+@media (max-width: 768px) {
+  .background-image {
+    height: 60vh;
+    top: -30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .background-image {
+    height: 49vh;
+    top: -44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .background-image {
+    height: 40vh;
+    top: 0;
+  }
+}
+
+
+
+.custom-section {
+    padding: 5rem;
+    background-color: #f7f8fc;
+    overflow: hidden;
+}
+
+.signage-heading {
+    font-weight: 400;
+    color: #000; 
+    font-family: 'serif'; 
+    display: block; 
+    font-size: 2.25rem; 
+}
+
+.image-gallery {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.image-gallery > div {
+    columns: 3;
+    gap: 1.25rem;
+    padding-top: 1.25rem;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.image-gallery img {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1.25rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 2rem;
+    margin-top: 12rem;
+}
+
+.see-more-btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.see-more-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+}
+
+@media (max-width: 48rem) {
+    .image-gallery > div {
+        columns: 2;
+    }
+}
+
+@media (max-width: 32rem) {
+    .image-gallery > div {
+        columns: 1;
+    }
+}
+
+/* Add animation for image gallery */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>

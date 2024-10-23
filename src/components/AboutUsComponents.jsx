@@ -143,7 +143,7 @@ const AboutUsPage = (props) => {
               <div className="justify-center h-full w-full flex flex-col items-start bg-headertop px-[5.5rem] lg:px-[3rem] md:p-16">
                 <span className="text-xlg lg:text-lg lg:leading-[26px] font-medium text-white mb-[20px] block">Our signs are made from durable materials designed to withstand Dubai’s climate.</span>
                 <p className="text-white font-sans opacity-70 mb-[20px] xs:mb-[15px]">Our team of designers ensures your signage is not only functional but visually appealing.</p>
-                <Buttons href="/page/our-services" className="font-medium font-serif uppercase  after:h-[2px] md:text-md md:mb-[15px] after:bg-[#fff] hover:text-[#fff]" color="#fff" title="Company overview" />
+                <Buttons href="/" className="font-medium font-serif uppercase  after:h-[2px] md:text-md md:mb-[15px] after:bg-[#fff] hover:text-[#fff]" color="#fff" title="Company overview" />
               </div>
             </Col>
             <Col lg={4} md={6} className="flex flex-col pr-0">
@@ -192,7 +192,7 @@ const AboutUsPage = (props) => {
               <h5 className="font-serif text-darkgray font-medium">It is teamwork that makes the dream work.</h5>
               <p>Explore our internal signage solutions in Dubai, including wayfinding, branding, safety signs, and digital displays. Tailored designs to enhance your space!</p>
               <Lists theme="list-style-02" data={ListData} className="mb-12 mt-8 text-darkgray font-serif" animation="" />
-              <Buttons href="/page/contact-modern" className="btn-fill font-medium font-serif rounded-[4px] uppercase md:mb-[15px]" themeColor="#0038e3" color="#fff" size="md" title="Get Started Now" />
+              <Buttons href="/ContactPage" className="btn-fill font-medium font-serif rounded-[4px] uppercase md:mb-[15px]" themeColor="#0038e3" color="#fff" size="md" title="Get Started Now" />
             </Col>
           </Row>
         </Container>

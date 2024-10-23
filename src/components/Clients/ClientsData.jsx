@@ -1,41 +1,41 @@
 const ClientData01 = [
   {
-    img: "https://via.placeholder.com/225x110",
+    img: "/assets/img/bond.jpg",
     target: "_self",
     link: "#",
   },
   {
-    img: "https://via.placeholder.com/225x110",
+    img: "/assets/img/bond1.jpg",
     target: "_self",
     link: "#",
   },
   {
-    img: "https://via.placeholder.com/225x110",
+    img: "/assets/img/bond2.jpg",
     target: "_self",
     link: "#",
   },
   {
-    img: "https://via.placeholder.com/225x110",
+    img: "/assets/img/bond3.jpg",
     target: "_self",
     link: "#",
   },
   {
-    img: "https://via.placeholder.com/225x110",
+    img: "/assets/img/bond4.jpg",
     target: "_self",
     link: "#",
   },
   {
-    img: "https://via.placeholder.com/225x110",
+    img: "/assets/img/bond.jpg",
     target: "_self",
     link: "#",
   },
   {
-    img: "https://via.placeholder.com/225x110",
+    img: "/assets/img/bond1.jpg",
     target: "_self",
     link: "#",
   },
   {
-    img: "https://via.placeholder.com/225x110",
+    img: "/assets/img/bond2.jpg",
     target: "_self",
     link: "#",
   },

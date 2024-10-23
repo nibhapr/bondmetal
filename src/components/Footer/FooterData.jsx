@@ -4,19 +4,16 @@ const FooterData = [
         submenu: [
             {
                 title: "About company",
-                link: "/page/about-us"
+                link: "/About"
             },
             {
-                title: "Company services",
-                link: "/page/our-services"
+                title: "Gallery",
+                link: "/Gallery"
             },
-            {
-                title: "Job opportunities",
-                link: "/page/our-team"
-            },
+            
             {
                 title: "Contact us",
-                link: "/page/contact-classic"
+                link: "/Contactpage"
             },
         ]
     },

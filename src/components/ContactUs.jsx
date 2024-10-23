@@ -1,4 +1,4 @@
- import React, { useRef } from 'react'
+import React, { useRef } from 'react'
 
 // // Libraries
  import { Col, Container, Navbar, Row } from 'react-bootstrap';
@@ -19,7 +19,29 @@
 // import { resetForm, sendEmail } from '../Functions/Utilities';
 
 
-
+//Data
+// const SocialIconsData = [
+//   {
+//     color: "#3b5998",
+//     link: "https://www.facebook.com/",
+//     icon: "fab fa-facebook-f"
+//   },
+//   {
+//     color: "#00aced",
+//     link: "https://twitter.com/",
+//     icon: "fab fa-twitter"
+//   },
+//   {
+//     color: "#fe1f49",
+//     link: "https://www.instagram.com/",
+//     icon: "fab fa-instagram"
+//   },
+//   {
+//     color: "#007bb6",
+//     link: "https://www.linkedin.com/",
+//     icon: "fab fa-linkedin-in"
+//   },
+// ]
 
 
 const ContactUsClassicPage = (props) => {
@@ -27,28 +49,6 @@ const ContactUsClassicPage = (props) => {
   return (
     <div style={props.style}>
      
-     <ParallaxProvider>
-  
-       <m.div className="md:flex md:items-center overflow-hidden relative md:h-[465px] sm:h-[350px] xs:h-[357px]">
-        <Parallax className="lg-no-parallax bg-cover cover-background absolute left-0 h-[120vh] top-[60px] lg:h-[64vh] lg:top-[-46px] lg:!translate-y-0 md:h-[60vh] md:-top-[30px] sm:top-[-44px] sm:h-[49vh] xs:top-0 xs:h-[40vh] w-full" translateY={[-40, 40]} style={{ backgroundImage: `url(./assets/img/bb6.jpg)` }}></Parallax>
-      </m.div> 
-      </ParallaxProvider>
-
-       <m.section className="bg-lightgray py-[130px] lg:py-[90px] md:py-[75px] sm:py-[50px]">
-        <Container>
-          <Row className="sm:justify-center">
-            <Col xs={12} sm={8} md={12}>
-              <FancyTextBox
-                grid="justify-center row-cols-1 row-cols-md-2 row-cols-lg-3 md:gap-y-[30px] xs:gap-y-[15px]"
-                theme="fancy-text-box-02"
-                data={fancyTextBox02}
-                animation="" />
-            </Col>
-          </Row>
-        </Container>
-      </m.section> 
-  
-
    
        <m.section className="py-[130px] lg:py-[90px] md:py-[75px] sm:py-[50px]">
         <Container>
@@ -100,21 +100,20 @@ const ContactUsClassicPage = (props) => {
       
 
     
- 
 
-      {/* Section Start */}
        <section>
-       <GoogleMap
+        <GoogleMap
           className=" h-[400px] p-0 md:h-[450px] xs:h-[300px]"
           location="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10543.900043209489!2d54.468406581896!3d24.36313463061232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e40fcf06c84c1%3A0x4d5c65ec02843da0!2sMusaffah%20-%20M-17%20-%20Abu%20Dhabi!5e1!3m2!1sen!2sae!4v1729338006027!5m2!1sen!2sae"
         />
-      </section> 
-      {/* Section End */}
 
-      {/* Footer Start */}
-  
-      {/* Footer End */}
+
+      </section> 
+      
+
     </div>
+
+
   )
 }
 

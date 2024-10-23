@@ -94,18 +94,31 @@ const FooterMenu = ({ data, titleClass, className, ...props }) => {
             {data.map((item, i) => {
                 return (
                     <Col key={i} {...props} className={`footer-menu${className ? ` ${className}` : ""}`}>
-                        {item.title && <span className={`mb-[20px] block font-medium font-serif xs:!mb-[10px]${titleClass ? ` ${titleClass}` : ""}`}>{item.title}</span>}
+                        {item.title && (
+                            <span className={`mb-[20px] block font-medium font-serif xs:!mb-[10px]${titleClass ? ` ${titleClass}` : ""}`}>
+                                {item.title}
+                            </span>
+                        )}
                         <ul>
-                            {item.submenu.map((item, i) => {
-                                return ((item.link || item.title) && <li key={i} className="mb-[7px] last:mb-0"><a aria-label="footer menu link" to={item.link}>{item.title}</a></li>)
+                            {item.submenu.map((submenuItem, j) => {
+                                return (
+                                    (submenuItem.link || submenuItem.title) && (
+                                        <li key={j} className="mb-[7px] last:mb-0">
+                                            <a aria-label="footer menu link" href={submenuItem.link}>
+                                                {submenuItem.title}
+                                            </a>
+                                        </li>
+                                    )
+                                );
                             })}
                         </ul>
                     </Col>
-                )
+                );
             })}
         </>
-    )
+    );
 }
+
 
 
 

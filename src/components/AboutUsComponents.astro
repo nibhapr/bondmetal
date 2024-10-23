@@ -1,0 +1,309 @@
+---
+import Buttons from '../components/Button/Buttons'
+import Clients from '../components/Clients/Clients'
+import Team from '../components/Team/Team'
+import IconWithText from '../components/IconWithText/IconWithText'
+import Lists from '../components/Lists/Lists'
+import Counter from '../components/Counters/Counter'
+import Overlap from './Overlap/Overlap'
+import CustomModal from '../components/CustomModal'
+import ClientCarouselPage from '../components/ClientCarousel'
+
+import { Navigation } from "swiper/modules";
+import { ParallaxProvider } from 'react-scroll-parallax'
+import { Col, Container, Row, Navbar } from 'react-bootstrap'
+import { Swiper, SwiperSlide } from "swiper/react";
+import { m } from 'framer-motion'
+
+const TestimonialsCarouselData = [
+  {
+    img: "/assets/img/airport.webp",
+    title: "Unlimited power customization",
+    number: "01",
+    content: "Lorem ipsum dolor sit amet consectetur do eiusmod tempor incididunt elit.",
+  },
+  {
+    img: "https://via.placeholder.com/800x622",
+    title: "Powerful creatives designer",
+    number: "02",
+    content: "Lorem ipsum dolor sit amet consectetur do eiusmod tempor incididunt elit.",
+  },
+  {
+    img: "https://via.placeholder.com/800x622",
+    title: "Advanced customization options",
+    number: "03",
+    content: "Lorem ipsum dolor sit amet consectetur do eiusmod tempor incididunt elit.",
+  },
+]
+
+const ListData = [
+  {
+    icon: "feather-arrow-right-circle",
+    content: "Custom artwork that reflects your brand’s personality"
+  },
+  {
+    icon: "feather-arrow-right-circle",
+    content: "Use of various materials such as vinyl, fabric, and wood",
+  },
+  {
+    icon: "feather-arrow-right-circle",
+    content: "Strategic placement to create focal points within the environment",
+  },
+]
+const TeamMembers = [
+  {
+    img: "/assets/user.png",
+    name: "John Doe",
+    position: "Creative Director",
+  },
+  {
+    img: "/assets/user.png",
+    name: "Jane Smith",
+    position: "Senior Designer",
+  },
+  {
+    img: "/assets/user.png",
+    name: "Mike Williams",
+    position: "Project Manager",
+  },
+]
+---
+<style>
+  .autoRotate{
+    animation: autoRotateAnimation;
+    animation-timeline: view();
+  }
+  @keyframes autoRotateAnimation{
+      from{
+          transform: rotate(0deg);
+      }
+      to{
+          transform: rotate(360deg);
+      }
+  }  
+
+  .autoShow{
+    animation: autoShowAnimation both;
+    animation-timeline: view(70% 5%);
+  }
+
+  @keyframes autoShowAnimation{
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+  }
+
+  .fadeInRight {
+    animation: fadeInRightAnimation;
+    animation-timeline: view();
+  }
+
+  @keyframes fadeInRightAnimation {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+  }
+
+  .fadeInLeft {
+    animation: fadeInLeftAnimation;
+    animation-timeline: view();
+  }
+
+  @keyframes fadeInLeftAnimation {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+
+
+
+  .team-card {
+  position: relative;
+  background: white;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.team-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.team-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.team-card .info {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.team-card:hover .overlay {
+  opacity: 1;
+}
+
+.team-card:hover .info {
+  opacity: 1;
+  transform: translate(-50%, -10px);
+}
+
+.team-card:hover img {
+  transform: scale(1.1);
+}
+</style>
+
+
+<div>
+    <ParallaxProvider>
+    <div class="h-[660px] lg:h-[580px] md:h-[550px] sm:h-[500px] xs:h-[380px] flex items-center overflow-hidden relative">
+        <div class="lg-no-parallax bg-cover cover-background absolute top-0 left-0 w-full h-[100vh]" style={{ backgroundImage: `url(/assets/img/baaner.webp)` }}></div>
+     </div>
+     </ParallaxProvider>
+    
+     <section id="about" class="bg-lightgray py-[130px] lg:py-[90px] md:py-[75px] sm:py-[50px]">
+       <div class="container">
+         <div class="row font-serif">
+           <div class="col-lg-4 flex md:mb-[30px] fadeInRight">
+             <div class="w-full md:h-[700px] sm:h-[550px] xs:h-[450px] cover-background" style={{ backgroundImage: "url('/assets/img/sign.webp') " }}></div>
+           </div>
+
+           <div class="col-lg-4 md-6 flex items-center sm:mb-[30px]">
+             <div class="justify-center h-full w-full flex flex-col items-start bg-headertop px-[5.5rem] lg:px-[3rem] md:p-16">
+               <span class="text-xlg lg:text-lg lg:leading-[26px] font-medium text-white mb-[20px] block">Our signs are made from durable materials designed to withstand Dubai’s climate.</span>
+               <p class="text-white font-sans opacity-70 mb-[20px] xs:mb-[15px]">Our team of designers ensures your signage is not only functional but visually appealing.</p>
+               <Buttons href="/" class="font-medium font-serif uppercase  after:h-[2px] md:text-md md:mb-[15px] after:bg-[#fff] hover:text-[#fff]" color="#fff" title="Company overview" />
+             </div>
+           </div>
+
+           <div class="col-lg-4 md-6 flex flex-col pr-0 fadeInLeft">
+             <img src="/assets/img/webp/about2.webp" alt="about us" class="sm:w-full" />
+             <div class="bg-white px-[3.5rem] py-[3rem] h-full lg:p-8 sm:p-16">
+               <span class="text-darkgray font-medium mb-[10px] block">Bond Sign Dubai</span>
+               <p class="font-sans">We specialize in creating customized signage solutions that meet the diverse needs of Dubai's dynamic market. Our team combines creativity with industry knowledge to deliver high-quality internal and external signage.</p>
+             </div>
+           </div>
+         </div>
+       </div>
+     </section>
+
+     
+   
+    
+   <m.section className="py-[130px] lg:py-[90px] md:py-[75px] xs:py-[50px]">
+       <div class="container">
+         <div class="row items-center">
+           <div class="col-lg-6 p-0 md:mb-[50px] autoShow border-white border-[12px] rounded-lg shadow-[0_0_15px_rgba(0,0,0,0.1)]">
+             <div class="relative">
+                <div class="h-full shadow-lg bg-[#fff]">
+                    <img src="assets/img/airport.webp" alt="business" class="w-full" width="531" height="413" />
+                </div>
+             </div>
+           </div>
+           <Col lg={{ span: 5, offset: 1 }} >
+            <h5 class="font-serif text-darkgray font-medium">It is teamwork that makes the dream work.</h5>
+            <p>Explore our internal signage solutions in Dubai, including wayfinding, branding, safety signs, and digital displays. Tailored designs to enhance your space!</p>
+            <Lists theme="list-style-02" data={ListData} className="mb-12 mt-8 text-darkgray font-serif" animation="" />
+            <Buttons href="/ContactPage" className="btn-fill font-medium font-serif rounded-[4px] uppercase md:mb-[15px]" themeColor="#0038e3" color="#fff" size="md" title="Get Started Now" />
+          </Col>
+         </div>
+       </div>
+     </m.section>
+
+
+
+   
+      <section class="py-[130px] lg:py-[90px] md:py-[75px] xs:py-[50px]">
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="font-serif text-darkgray font-bold">Meet Our Team</h2>
+              <p class="text-darkgray opacity-70">Our team of experts is dedicated to delivering creative and impactful signage solutions.</p>
+            </div>
+          </div>
+
+          <div class="row">
+            {TeamMembers.map((member) => (
+              <div class={`col-lg-4 col-md-6 text-center mb-[30px] autoShow`}>
+                <div class="relative bg-white shadow-lg rounded-lg overflow-hidden p-9">
+                  <img src={member.img} alt={member.name} class="w-[150px] h-[150px] rounded-full mx-auto mt-3 mb-[20px]" />
+                  <h4 class="font-serif text-darkgray font-small text-lg">{member.name}</h4>
+                  <span class="text-primary uppercase text-sm">{member.position}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      <!-- another style
+  
+<section class="py-[130px] lg:py-[90px] md:py-[75px] xs:py-[50px]">
+  <div class="container">
+    <div class="row justify-center text-center">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="font-serif text-darkgray font-bold">Meet Our Team</h2>
+        <p class="text-darkgray opacity-70">
+          Our team of experts is dedicated to delivering creative and impactful signage solutions.
+          </p>
+        </div>
+      </div>
+      
+      <div class="row">
+        {TeamMembers.map((member) => (
+          <div class="col-lg-4 col-md-6 text-center mb-[30px]">
+            <div class="team-card p-9 relative bg-white shadow-lg rounded-lg overflow-hidden">
+              <div class="overlay"></div>
+              <img
+              src={member.img}
+                alt={member.name}
+                class="mx-auto mt-3 mb-[20px]"
+                />
+              <div class="info">
+                <h4 class="font-serif text-white font-small text-lg">{member.name}</h4>
+                <span class="text-white uppercase text-sm">{member.position}</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  -->
+  
+    
+     
+  
+</div>

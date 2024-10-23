@@ -35,49 +35,49 @@ const InteractiveBannersData02 = [
         title: "BBrand Logo Design",
         img: "/assets/img/bond.jpg",
         btnTitle: "Learn more",
-        btnLink: "/page/about-us"
+        btnLink: "/Gallery"
     },
     {
         subtitle: "Business Card Design",
         title: "Business Card Design",
         img: "/assets/img/bond1.jpg",
         btnTitle: "Learn more",
-        btnLink: "/page/about-us"
+        btnLink: "/Gallery"
     },
     {
         subtitle: "Media Art Design",
         title: "Media Art Design",
         img: "/assets/img/bond3.jpg",
         btnTitle: "Learn more",
-        btnLink: "/page/about-us"
+        btnLink: "/Gallery"
     },
     {
         subtitle: "Banner, Residential",
         title: "Company Branding",
         img: "/assets/img/bond4.jpg",
         btnTitle: "Learn more",
-        btnLink: "/page/about-us"
+        btnLink: "/Gallery"
     },
     {
         subtitle: "Commercial, Printing",
         title: "FLetterhead Design",
         img: "/assets/img/bond2.jpg",
         btnTitle: "Learn more",
-        btnLink: "/page/about-us"
+        btnLink: "/Gallery"
     },
     {
         subtitle: "Unique",
         title: "We are delivering beautiful products",
         img: "/assets/img/bond3.jpg",
         btnTitle: "Learn more",
-        btnLink: "/page/about-us"
+        btnLink: "/Gallery"
     },
     {
         subtitle: "Responsive",
         title: "True responsiveness modern responsive",
         img: "/assets/img/bond2.jpg",
         btnTitle: "Learn more",
-        btnLink: "/page/about-us"
+        btnLink: "/Gallery"
     },
 ]
 
